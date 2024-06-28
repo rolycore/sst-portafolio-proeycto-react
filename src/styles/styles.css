@@ -1,3 +1,14 @@
+@import './components/home.css';
 @import './components/aboutMe.css';
 @import './components/appBar.css';
 @import './components/scrollbar.css';
+@import './components/services.css';
+@import './components/servicesdetails.css';
+@import './components/products.css';
+@import './components/productdetails.css';
+@import './components/cotizacion.css';
+@import './components/politica.css';
+@import './components/about.css';
+@import './components/contactform.css';
+@import './components/WhatsAppWidgetComponent.css';
+@import './components/app.css';

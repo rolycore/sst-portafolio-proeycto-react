@@ -3,8 +3,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CustomAccordion from "./CustomAccordion";
 import videosistemaventajava from "../multimedia/videos/sistemaventasjavamysql.mp4";
-import videoflappybird from "../multimedia/videos/flappybird.mp4";
-import videoreproductomp3 from "../multimedia/videos/ReproductorMP3.mp4";
 import videoappcitas from "../multimedia/videos/appcitas-sst.mp4";
 import videoecommerce from "../multimedia/videos/ecommercbasico.mp4";
 import videocriptomonedas from "../multimedia/videos/app-cripto.mp4";
@@ -21,17 +19,10 @@ import presupuesto from "../multimedia/images/presupuesto.PNG";
 import appreporte from "../multimedia/images/appreportes.PNG";
 import sistemaVentas from "../multimedia/images/sistemadeventa.webp";
 
-import juegoflappybird from "../multimedia/images/flappybird.webp";
-import reporductormp3 from "../multimedia/images/reproductormp3.webp";
 
 export default function Projects(props) {
   const { titulo } = props;
 
-
-
-const reproductormp3Imagen=[
-  {img: reporductormp3,}
-]
   
   const sistemaVentasImagenes=[
     { img: sistemaVentas,}
@@ -67,10 +58,7 @@ const migithub=[
   {nombre:  "Mi reporsitorio",
   href: "https://github.com/rolycore"}
 ]
-  const flappybirdImagen=[
-    {img:juegoflappybird},
-  ]
-  
+
   const botonesreporteCrudApp = [
     {
       nombre: "Código fuente Frontend",
@@ -116,23 +104,14 @@ const migithub=[
      href:"https://sst-presupuesto.netlify.app/",
      color:"success",}
    ];
-const botonesReproductorMp3=[
-  {nombre: "Código fuente",
-    href:"https://github.com/rolycore/PlayMP3_1",  
-}
-]
+
 
   const botonesSistemaVentas=[
     {nombre: "Código fuente",
     href: "https://github.com/rolycore/sst-punto-venta",
   }
   ]
-  const botonesFlappybird=[
-    {
-      nombre: "Código fuente",
-    href: "https://github.com/rolycore/FlappyBird",
-    }
-  ]
+
 
   const lenguajesCitaApp = [
     { texto: "ReactJS", color: "primary", variant: "outlined" },
@@ -165,14 +144,6 @@ const botonesReproductorMp3=[
   const lenguajesSistemaVentaApp=[
     {texto: "Java", color: "primary", variant: "outlined"},
     { texto: "MySQL", color: "warning", variant: "outlined" },
-  ];
-  const lenguajeFlappybird=[
-    {texto: "Java", color: "primary", variant: "outlined"},
-   
-  ]
-  const lenguajeReproductorMp3=[
-    {texto: "Java", color: "primary", variant: "outlined"},
-   
   ];
 
   const detallesCitasApp = [
@@ -268,76 +239,66 @@ const botonesReproductorMp3=[
           descripcion="Aplicación calcular el presupuesto segun los gastos."
           lenguajes={lenguajesPresupuestoApp}
           detalles={detallesPresupuestoApp}
+          botones={botonesPresupuesto}
           imagenes={presupuestoimg}
           tituloVideo="Vista previa en vídeo"
           video={videopresupuesto}
-          botones={botonesPresupuesto}
+          
         />
         <CustomAccordion
           titulo="Sistema-de-Ventas"
           descripcion="Sistema de Venta, facturación e inventario."
           lenguajes={lenguajesSistemaVentaApp}
           detalles={detallesSistemaVentaApp}
+          botones={botonesSistemaVentas}
           imagenes={sistemaVentasImagenes}
           tituloVideo="Vista previa en vídeo"
           video={videosistemaventajava}
-          botones={botonesSistemaVentas}
+          
         />
-        <CustomAccordion
-          titulo="Flappy-Bird"
-          descripcion="Juego de Flappy Bird."
-          lenguajes={lenguajeFlappybird}
-          imagenes={flappybirdImagen}
-          video={videoflappybird}
-          botones={botonesFlappybird}
-        />
-        <CustomAccordion
-          titulo="Reproductor-MP3"
-          descripcion="Reproductor MP3 para Desktop."
-          lenguajes={lenguajeReproductorMp3}
-          imagenes={reproductormp3Imagen}
-          video={videoreproductomp3}
-          botones={botonesReproductorMp3}
-        />
-                <CustomAccordion
+          <CustomAccordion
           titulo="Administrador de Citas"
           descripcion="Agendar citas para pacientes."
           lenguajes={lenguajesCitaApp}
           detalles={detallesCitasApp}
+          botones={botonesAppcitas}
           imagenes={appcitasimg}
           tituloVideo="Vista previa en vídeo"
           video={videoappcitas}
-          botones={botonesAppcitas}
+          
         />
-                <CustomAccordion
+        <CustomAccordion
           titulo="Conversor Criptomonedas"
           descripcion="Conversor de Monedas a Criptomonedas."
           lenguajes={lenguajesCriptoApp}
           detalles={detallesCriptoApp}
+          botones={botonesCripto}
           imagenes={criptoimg}
           tituloVideo="Vista previa en vídeo"
           video={videocriptomonedas}
-          botones={botonesCripto}
+          
         />
-                <CustomAccordion
+        <CustomAccordion
           titulo="Cotizador de Seguro para Automovil"
           descripcion="Calcula el seguro para un automovil segun de los factores como Año, Marca, y Plan de seguro."
           lenguajes={lenguajesCotizadorApp}
           detalles={detallesCotizadorApp}
+          botones={botonesCotizador}
           imagenes={cotizadorimg}
           tituloVideo="Vista previa en vídeo"
           video={videocotizadorseguro}
-          botones={botonesCotizador}
+          
         />
-                <CustomAccordion
+        <CustomAccordion
           titulo="Ecommerce (Tienda virtual)"
           descripcion="Venta de productos en linea, tu tienda virtual para tu negocio."
           lenguajes={lenguajesEcommerceApp}
           detalles={detallesEcommerceApp}
+          botones={botonesEcommerce}
           imagenes={ecommerceimg}
           tituloVideo="Vista previa en vídeo"
           video={videoecommerce}
-          botones={botonesEcommerce}
+          
         />
       </Container>
     </div>

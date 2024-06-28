@@ -5,10 +5,13 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Stack from "@mui/material/Stack";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Container from "@mui/material/Container";
 import MailIcon from "@mui/icons-material/Mail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Link } from 'react-router-dom';
 
 export default function Footer(props) {
   const {
@@ -19,11 +22,26 @@ export default function Footer(props) {
     urlWhatsapp,
     nombreBotonWhatsapp,
     textoFinalFooter,
+    urlInstagram,
+    urlFacebook,
     urlGithub,
     urlLinkedin,
   } = props;
+  const currentYear = new Date().getFullYear(); // Obtener el año actual
 
   const buttons = [
+    <Button
+      key="instagram"
+      href={urlInstagram}
+      target="_blank"
+      rel="noopener noreferrer"
+    ><InstagramIcon /></Button>,
+    <Button
+      key="facebook"
+      href={urlFacebook}
+      target="_blank"
+      rel="noopener noreferrer"
+    ><FacebookIcon /></Button>,
     <Button
       key="github"
       href={urlGithub}
@@ -43,7 +61,8 @@ export default function Footer(props) {
   ];
 
   return (
-    <div id="contacts">
+    <div id="footer">
+      
       <Box
         sx={{ bgcolor: "#272727" }}
         justifyContent="center"
@@ -114,6 +133,22 @@ export default function Footer(props) {
           >
             {buttons}
           </ButtonGroup>
+        </Stack>
+        <Stack
+          sx={{ pt: 1 }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        >
+          <div className="footer-links">
+            <Box>
+              <Link to={`/politica`} className="politica-button">Política de Privacidad</Link>
+              {/* Otros enlaces */}
+            </Box>
+          </div>
+          <div className="copyright">
+            &copy; {currentYear} Shalom Solution Tech. Todos los derechos reservados.
+          </div>
         </Stack>
         <br />
       </Box>

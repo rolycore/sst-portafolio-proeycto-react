@@ -13,7 +13,7 @@ export default function Skills(props) {
         <br />
         <Typography
           component="h1"
-          variant="h2"npm
+          variant="h2"
           align="center"
           color="text.primary"
           gutterBottom
@@ -22,18 +22,19 @@ export default function Skills(props) {
         </Typography>
 
         <Box display="flex" justifyContent="center" flexWrap="wrap">
-          {avatars.flat().map((avatar, index) => (
-            <Avatar
-              key={index}
-              sx={{
-                width: "74px",
-                height: "74px",
-                margin: "10px",
-              }}
-              alt={avatar.alt}
-              src={avatar.src}
-            />
-          ))}
+        {avatars && avatars.flat().map((avatar, index) => (
+  <Avatar
+    key={index}
+    sx={{
+      width: "74px",
+      height: "74px",
+      margin: "10px",
+    }}
+    alt={avatar.alt}
+    src={avatar.src}
+  />
+))}
+
         </Box>
       </Container>
     </div>

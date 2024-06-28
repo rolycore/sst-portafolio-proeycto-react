@@ -1,0 +1,51 @@
+/* Cotizacion.css */
+/* Estilos específicos para el componente Cotizacion */
+
+.cotizacion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+  }
+  
+  .cotizacion-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Color del texto */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555; /* Color del texto */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #006fb9; /* Color del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .submit-button:hover {
+    background-color: #005fa3; /* Color del botón al hacer hover */
+  }
+  

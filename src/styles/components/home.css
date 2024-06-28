@@ -1,0 +1,52 @@
+/* Home.css */
+/* Estilos específicos para el componente Home */
+
+/* Estilos para el banner */
+
+  /* Estilos para la sección de nosotros */
+  .about-section {
+    padding: 2rem 0;
+    background-color: #f4f4f4; /* Nuevo color de fondo */
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .about-section strong {
+    font-size: 1.2rem;
+    color: #555;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  
+  .about-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #006fb9; /* Color del botón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .about-button:hover {
+    background-color: #005c95; /* Color del botón al pasar el ratón */
+  }
+  

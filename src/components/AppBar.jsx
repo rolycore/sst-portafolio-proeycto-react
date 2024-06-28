@@ -5,13 +5,19 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
+import { Link } from "react-router-dom";  // Importa Link desde react-router-dom
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";  // Asegúrate de importar MenuItem
 
 const ResponsiveAppBar = (props) => {
   const {
+    tituloHome,
     tituloSobreMi,
+    tituloNosotros,
+    tituloServicios,
+    tituloProductos,
     tituloHabilidades,
     tituloProyectos,
     tituloContacto,
@@ -29,7 +35,7 @@ const ResponsiveAppBar = (props) => {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -62,21 +68,30 @@ const ResponsiveAppBar = (props) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Button onClick={handleCloseNavMenu} href="#aboutme">
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/">
+                {tituloHome}
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/aboutme">
                 {tituloSobreMi}
-              </Button>
-
-              <Button onClick={handleCloseNavMenu} href="#skills">
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/about">
+                {tituloNosotros}
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/skills">
                 {tituloHabilidades}
-              </Button>
-
-              <Button onClick={handleCloseNavMenu} href="#projects">
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/projects">
                 {tituloProyectos}
-              </Button>
-
-              <Button onClick={handleCloseNavMenu} href="#contacts">
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/services">
+                {tituloServicios}
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/products">
+                {tituloProductos}
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} component={Link} to="/contacts">
                 {tituloContacto}
-              </Button>
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -88,19 +103,23 @@ const ResponsiveAppBar = (props) => {
             {tituloNombre}
           </Typography>
           <Box
-            style={{
-              justifyContent: "center",
-            }}
+            style={{ justifyContent: "center" }}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
-            <Button href="#aboutme">{tituloSobreMi}</Button>
-            <Button href="#skills">{tituloHabilidades}</Button>
-            <Button href="#projects"> {tituloProyectos}</Button>
-            <Button href="#contacts">{tituloContacto}</Button>
+            <Button component={Link} to="/">{tituloHome}</Button>
+            <Button component={Link} to="/about">{tituloNosotros}</Button>
+            <Button component={Link} to="/aboutme">{tituloSobreMi}</Button>
+            <Button component={Link} to="/skills">{tituloHabilidades}</Button>
+            <Button component={Link} to="/projects">{tituloProyectos}</Button>
+            <Button component={Link} to="/services">{tituloServicios}</Button>
+            <Button component={Link} to="/products">{tituloProductos}</Button>
+            <Button component={Link} to="/contacts">{tituloContacto}</Button>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
+
 export default ResponsiveAppBar;
+
